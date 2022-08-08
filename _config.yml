@@ -17,13 +17,11 @@ title: MSSE Bootcamp Blog
 email: msse@berkeley.edu
 description: >- # this means to ignore newlines until "baseurl:"
   A website for the MSSE Bootcamp
-repository: blog-alpha-chi-omega
-
-
+repository:
 baseurl: "/blog-alpha-chi-omega" # the subpath of your site, e.g. /blog
 url:  # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
-github_username: bustinbran
+github_username: 
 
 # Build settings
 markdown: CommonMarkGhPages
