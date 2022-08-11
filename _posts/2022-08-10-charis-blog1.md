@@ -23,12 +23,13 @@ Since the thermodynamic system (LJ Potential) of interest actually involves high
 
 It is not surprised to implement multiple "for loops" to compare every single particle pair; however, having nested for loops will increase the runtime of our stimulation. At this point, we should ask ourselves, how can we avoid useless calculations and improve runtime? 
 
-A simple answer to the above question would be to only compare the particle of interested with other pariticles in the system instead of compare all possible particle pairs. This would lower the number of computation from n choose 2 permutations to n-1 times. 
+A simple answer to the above question would be to only compare the particle of interest with other pariticles in the system instead of comparing all possible particle pairs. This would lower the number of computation from n choose 2 permutations to n-1 times. 
 
 # RDF - The Radial Distribution Function 
 
-Theoretically, the distribution for pariticles should be the same; however, this is not possible because the attractions between molecules will hindered the uniform distribution of the configuration. This is where the radial distribution comes into play to analyze pair correlation of the local structure of particles. 
-If we plot the function, we would see different graphs for solid, liquid, and gas. This is becuase Solids have regular, periodic structures, with molecules fluctuating near their lattice positions, but gases do not, and liquids do not maintain a constant structure and lose all of their long-range structure. Radial distribution function converge to one for liquids and gases because with a large r, molecules become independent and the density become really bulky. In a molecular simulation, you will typically calculate the RDF for each individual frame, then averaged. This might due to the likelihood of certain configurations are more likely, but we can't ignore the other configurations as well. 
+Theoretically, the distribution for pariticles should be uniform; however, by applying the radial distribution there will be a "r" and "dr" that would affect the probability of finding a particle. By counting the number of particles that fall within the dr range, and divide it with the volume and density, we would be able to derive g(r) (probability of finding a particle at a distance r from another tagged particle). The probability fluctuate, but as dr gets larger, more particles will fall within the accepted range, which is the reason why eventually, the function will converge to one. 
+
+If we plot the function, we would see different graphs for solid, liquid, and gas. This is becuase Solids have regular, periodic structures, with molecules fluctuating near their lattice positions, but gases do not, and liquids do not maintain a constant structure and lose all of their long-range structure. Radial distribution function converge to one for liquids and gases because with a large r, molecules become independent and the density become really bulky. In a molecular simulation, you will typically calculate the RDF for each individual frame, then average them. This might be due to the likelihood of certain configurations are more likely, but we can't ignore the other configurations as well. 
 
 
 
