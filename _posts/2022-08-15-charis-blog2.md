@@ -1,5 +1,6 @@
+
 ---
-layer: post 
+layout: post 
 title: 'std::cout << "The backbone of computer languages: C++" << std::endl;'
 author: Charis Liao 
 ---   
